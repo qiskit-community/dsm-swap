@@ -1,0 +1,413 @@
+[
+  {
+    "seed": 38492314298,
+    "num_qubits": 4,
+    "qv_depth": 5,
+    "max_optim_steps": 10,
+    "horizon": 2,
+    "restart": 3,
+    "swap_layers": "log_2",
+    "depth": 6,
+    "num_swaps": 1,
+    "swaps": [
+      [
+        0,
+        3
+      ]
+    ]
+  },
+  {
+    "seed": 38492315298,
+    "num_qubits": 4,
+    "qv_depth": 6,
+    "max_optim_steps": 10,
+    "horizon": 2,
+    "restart": 3,
+    "swap_layers": "log_2",
+    "depth": 7,
+    "num_swaps": 1,
+    "swaps": [
+      [
+        0,
+        1
+      ]
+    ]
+  },
+  {
+    "seed": 38492316298,
+    "num_qubits": 4,
+    "qv_depth": 7,
+    "max_optim_steps": 10,
+    "horizon": 2,
+    "restart": 3,
+    "swap_layers": "log_2",
+    "depth": 8,
+    "num_swaps": 1,
+    "swaps": [
+      [
+        0,
+        3
+      ]
+    ]
+  },
+  {
+    "seed": 38492317298,
+    "num_qubits": 4,
+    "qv_depth": 7,
+    "max_optim_steps": 10,
+    "horizon": 3,
+    "restart": 3,
+    "swap_layers": "log_2",
+    "depth": 9,
+    "num_swaps": 2,
+    "swaps": [
+      [
+        2,
+        3
+      ],
+      [
+        1,
+        2
+      ]
+    ]
+  },
+  {
+    "seed": 38492318298,
+    "num_qubits": 5,
+    "qv_depth": 5,
+    "max_optim_steps": 10,
+    "horizon": 2,
+    "restart": 3,
+    "swap_layers": "log_2",
+    "depth": 6,
+    "num_swaps": 1,
+    "swaps": [
+      [
+        3,
+        4
+      ]
+    ]
+  },
+  {
+    "seed": 38492319298,
+    "num_qubits": 5,
+    "qv_depth": 5,
+    "max_optim_steps": 10,
+    "horizon": 3,
+    "restart": 3,
+    "swap_layers": "log_2",
+    "depth": 6,
+    "num_swaps": 2,
+    "swaps": [
+      [
+        1,
+        2
+      ],
+      [
+        2,
+        3
+      ]
+    ]
+  },
+  {
+    "seed": 38492320298,
+    "num_qubits": 5,
+    "qv_depth": 6,
+    "max_optim_steps": 10,
+    "horizon": 2,
+    "restart": 3,
+    "swap_layers": "log_2",
+    "depth": 9,
+    "num_swaps": 4,
+    "swaps": [
+      [
+        0,
+        4
+      ],
+      [
+        2,
+        3
+      ],
+      [
+        0,
+        4
+      ],
+      [
+        3,
+        4
+      ]
+    ]
+  },
+  {
+    "seed": 38492321298,
+    "num_qubits": 5,
+    "qv_depth": 6,
+    "max_optim_steps": 10,
+    "horizon": 3,
+    "restart": 3,
+    "swap_layers": "log_2",
+    "depth": 7,
+    "num_swaps": 2,
+    "swaps": [
+      [
+        0,
+        4
+      ],
+      [
+        2,
+        3
+      ]
+    ]
+  },
+  {
+    "seed": 38492322298,
+    "num_qubits": 5,
+    "qv_depth": 7,
+    "max_optim_steps": 10,
+    "horizon": 2,
+    "restart": 3,
+    "swap_layers": "log_2",
+    "depth": 11,
+    "num_swaps": 4,
+    "swaps": [
+      [
+        0,
+        1
+      ],
+      [
+        0,
+        1
+      ],
+      [
+        0,
+        4
+      ],
+      [
+        2,
+        3
+      ]
+    ]
+  },
+  {
+    "seed": 38492323298,
+    "num_qubits": 5,
+    "qv_depth": 7,
+    "max_optim_steps": 10,
+    "horizon": 3,
+    "restart": 3,
+    "swap_layers": "log_2",
+    "depth": 11,
+    "num_swaps": 5,
+    "swaps": [
+      [
+        2,
+        3
+      ],
+      [
+        1,
+        2
+      ],
+      [
+        2,
+        3
+      ],
+      [
+        3,
+        4
+      ],
+      [
+        0,
+        4
+      ]
+    ]
+  },
+  {
+    "seed": 38492324298,
+    "num_qubits": 6,
+    "qv_depth": 5,
+    "max_optim_steps": 10,
+    "horizon": 2,
+    "restart": 3,
+    "swap_layers": "log_2",
+    "depth": 9,
+    "num_swaps": 6,
+    "swaps": [
+      [
+        0,
+        5
+      ],
+      [
+        0,
+        5
+      ],
+      [
+        1,
+        2
+      ],
+      [
+        0,
+        5
+      ],
+      [
+        4,
+        5
+      ],
+      [
+        1,
+        2
+      ]
+    ]
+  },
+  {
+    "seed": 38492325298,
+    "num_qubits": 6,
+    "qv_depth": 6,
+    "max_optim_steps": 10,
+    "horizon": 2,
+    "restart": 3,
+    "swap_layers": "log_2",
+    "depth": 10,
+    "num_swaps": 5,
+    "swaps": [
+      [
+        0,
+        5
+      ],
+      [
+        3,
+        4
+      ],
+      [
+        0,
+        5
+      ],
+      [
+        0,
+        1
+      ],
+      [
+        4,
+        5
+      ]
+    ]
+  },
+  {
+    "seed": 38492326298,
+    "num_qubits": 6,
+    "qv_depth": 6,
+    "max_optim_steps": 10,
+    "horizon": 3,
+    "restart": 3,
+    "swap_layers": "log_2",
+    "depth": 10,
+    "num_swaps": 7,
+    "swaps": [
+      [
+        4,
+        5
+      ],
+      [
+        1,
+        2
+      ],
+      [
+        2,
+        3
+      ],
+      [
+        0,
+        5
+      ],
+      [
+        3,
+        4
+      ],
+      [
+        0,
+        5
+      ],
+      [
+        4,
+        5
+      ]
+    ]
+  },
+  {
+    "seed": 38492327298,
+    "num_qubits": 6,
+    "qv_depth": 7,
+    "max_optim_steps": 10,
+    "horizon": 2,
+    "restart": 3,
+    "swap_layers": "log_2",
+    "depth": 12,
+    "num_swaps": 8,
+    "swaps": [
+      [
+        3,
+        4
+      ],
+      [
+        2,
+        3
+      ],
+      [
+        0,
+        5
+      ],
+      [
+        4,
+        5
+      ],
+      [
+        4,
+        5
+      ],
+      [
+        0,
+        1
+      ],
+      [
+        4,
+        5
+      ],
+      [
+        2,
+        3
+      ]
+    ]
+  },
+  {
+    "seed": 38492328298,
+    "num_qubits": 6,
+    "qv_depth": 7,
+    "max_optim_steps": 10,
+    "horizon": 3,
+    "restart": 3,
+    "swap_layers": "log_2",
+    "depth": 12,
+    "num_swaps": 5,
+    "swaps": [
+      [
+        1,
+        2
+      ],
+      [
+        0,
+        1
+      ],
+      [
+        1,
+        2
+      ],
+      [
+        0,
+        5
+      ],
+      [
+        0,
+        1
+      ]
+    ]
+  }
+]
