@@ -21,6 +21,7 @@ from qiskit.dagcircuit import DAGCircuit
 from qiskit.converters import circuit_to_dag
 from qiskit.circuit.library import SwapGate
 from qiskit.transpiler.layout import Layout
+from qiskit.circuit import Measure
 import numpy as np
 from typing import Collection, Union, Tuple, List
 
@@ -203,6 +204,8 @@ class DecomposedDAG:
             n = layer.num_qubits()
             m = np.zeros((n, n), dtype=int)
             for g in layer.op_nodes(include_directives=False):
+                if isinstance(g.op, Measure):
+                    continue
                 assert g.op.num_clbits == 0
                 if g.op.num_qubits == 1:
                     continue
