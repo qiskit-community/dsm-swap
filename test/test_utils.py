@@ -54,6 +54,17 @@ class TestDecomposeDAGFunction(DSMSwapTestCase):
 
         self.assertEqual(dag_to_circuit(ddag.layers[0]), qc)
 
+    def test_dag_decompose_with_measure(self):
+        """Test on a circuit with measure operations."""
+        qc = QuantumCircuit(4)
+        qc.measure_all()
+        ddag = dag_decompose(qc)
+
+        self._test_decomposed_dag(ddag, 1)
+        np.testing.assert_array_equal(ddag.get_adjs()[0], np.zeros((4, 4)))
+
+        self.assertEqual(dag_to_circuit(ddag.layers[0]), qc)
+
     def test_dag_decompose_one_layer(self):
         """Test on a circuit that has only one layer."""
         qc = QuantumCircuit(4)
