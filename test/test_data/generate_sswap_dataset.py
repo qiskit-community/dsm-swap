@@ -33,7 +33,7 @@ if __name__ == "__main__":
     all_values = [[0, 0], [np.pi / 4, np.pi / 4, np.pi / 4], [np.pi / 2, np.pi / 2, np.pi / 2]]
 
     sswap_dataset = []
-    for (compose, tpow2, ident_term) in all_params:
+    for compose, tpow2, ident_term in all_params:
         for swaps, values in zip(all_swaps, all_values):
             num_qubits = np.max(swaps) + 1
             result = sswaps(

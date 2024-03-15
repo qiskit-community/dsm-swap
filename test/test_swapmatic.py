@@ -300,7 +300,7 @@ class TestSwapmatic(DSMSwapTestCase):
 
     @data(
         [CouplingMap.from_line(4), [[(1, 2)], [(0, 1), (2, 3)]]],
-        [CouplingMap.from_ring(4), [[(0, 3), (1, 2)], [(2, 3), (1, 0)]]],   # 0, 1
+        [CouplingMap.from_ring(4), [[(0, 3), (1, 2)], [(2, 3), (1, 0)]]],  # 0, 1
         [
             CouplingMap.from_grid(2, 3),
             [[(1, 4), (0, 3), (2, 5)], [(3, 4), (0, 1)], [(1, 2), (4, 5)]],
