@@ -102,7 +102,7 @@ class DSMSwapPassManager(PassManagerStagePlugin):
         target = pass_manager_config.target
         coupling_map = pass_manager_config.coupling_map
         backend_properties = pass_manager_config.backend_properties
-        vf2_call_limit = common.get_vf2_call_limit(
+        vf2_call_limit = common.get_vf2_limits(
             optimization_level,
             pass_manager_config.layout_method,
             pass_manager_config.initial_layout,

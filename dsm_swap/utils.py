@@ -35,7 +35,7 @@ def _get_targets(rec, *, expected=None):
 
     Given the qargs from a gate, obtain and validate the target qubits.
     """
-    t = [int(q.index) for q in rec]
+    t = [int(q._index) for q in rec]
     if expected is not None and len(t) != expected:
         raise ValueError(f"Expected {expected} target qubits, found: {rec}")
     return t

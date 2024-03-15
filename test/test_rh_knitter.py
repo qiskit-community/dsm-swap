@@ -152,7 +152,7 @@ class TestRHKnitter(DSMSwapTestCase):
         """Extract swap operations and their qubit indices into a list."""
         return list(
             map(
-                lambda node: [node.qargs[0].index, node.qargs[1].index],
+                lambda node: [node.qargs[0]._index, node.qargs[1]._index],
                 filter(lambda node: node.name == "swap", dag.op_nodes()),
             )
         )

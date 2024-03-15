@@ -37,8 +37,8 @@ class TestDecomposeDAGFunction(DSMSwapTestCase):
     def test_dag_decompose_q2(self):
         """Test on a two qubit circuit."""
         qc = QuantumCircuit(2)
-        qc.cnot(0, 1)
-        qc.cnot(1, 0)
+        qc.cx(0, 1)
+        qc.cx(1, 0)
         ddag = dag_decompose(qc)
         self._test_decomposed_dag(ddag, 1)
         self.assertEqual(dag_to_circuit(ddag.layers[0]), qc)
@@ -68,8 +68,8 @@ class TestDecomposeDAGFunction(DSMSwapTestCase):
     def test_dag_decompose_one_layer(self):
         """Test on a circuit that has only one layer."""
         qc = QuantumCircuit(4)
-        qc.cnot(0, 3)
-        qc.cnot(1, 2)
+        qc.cx(0, 3)
+        qc.cx(1, 2)
         ddag = dag_decompose(qc)
 
         self._test_decomposed_dag(ddag, 1)
@@ -80,9 +80,9 @@ class TestDecomposeDAGFunction(DSMSwapTestCase):
     def test_dag_decompose_two_layers(self):
         """Test on a circuit that has two layers."""
         qc = QuantumCircuit(4)
-        qc.cnot(0, 3)
-        qc.cnot(1, 2)
-        qc.cnot(0, 1)
+        qc.cx(0, 3)
+        qc.cx(1, 2)
+        qc.cx(0, 1)
         ddag = dag_decompose(qc)
 
         self._test_decomposed_dag(ddag, 2)
@@ -107,7 +107,7 @@ class TestDecomposeDAGFunction(DSMSwapTestCase):
         two-qubit gates.
         """
         qc = QuantumCircuit(3)
-        qc.cnot(0, 1)
+        qc.cx(0, 1)
         qc.h([0, 1])
         ddag = dag_decompose(qc)
         self._test_decomposed_dag(ddag, 1)
@@ -163,10 +163,10 @@ class TestDecomposedDAGClass(DSMSwapTestCase):
         qc_actual = dag_to_circuit(dag)
 
         # test layout
-        self.assertEqual(layout.get_physical_bits()[0].index, 1)
-        self.assertEqual(layout.get_physical_bits()[1].index, 0)
-        self.assertEqual(layout.get_physical_bits()[2].index, 3)
-        self.assertEqual(layout.get_physical_bits()[3].index, 2)
+        self.assertEqual(layout.get_physical_bits()[0]._index, 1)
+        self.assertEqual(layout.get_physical_bits()[1]._index, 0)
+        self.assertEqual(layout.get_physical_bits()[2]._index, 3)
+        self.assertEqual(layout.get_physical_bits()[3]._index, 2)
 
         # test resulting circuit
         qc_expected = QuantumCircuit(4)
