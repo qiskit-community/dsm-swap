@@ -124,7 +124,7 @@ def coo_mat_vectorize(c, v, shape, *, dtype=None, storage=STORAGE_SPARSE_SPEC):
     # for the best performance. Duplication is actually not happening for now,
     # just beware of future development.
     m = torch.zeros(shape, dtype=dtype)
-    m[c.tolist()] = torch.as_tensor(v, dtype=dtype)
+    m[(c[0], c[1])] = torch.as_tensor(v, dtype=dtype)
     return m
     # Alternative solution handles duplicates correctly, but it is slow:
     # return torch.sparse_coo_tensor(c, v, shape, dtype=dtype).to_dense()
