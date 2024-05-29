@@ -82,7 +82,7 @@ The code on which this module is based was written by Nicola Mariella, Anton Dek
 
 <!-- REFERENCES -->
 ### References
-[1] Nicola Mariella, Sergiy Zhuk, *A doubly stochastic matrices-based approach to optimal qubit routing* [arXiv:2211.07222](https://arxiv.org/abs/2211.07222).
+[1] Nicola Mariella, Sergiy Zhuk, *A doubly stochastic matrices-based approach to optimal qubit routing* [https://doi.org/10.1007/s11128-023-04023-z](https://doi.org/10.1007/s11128-023-04023-z).
 
 <!-- LICENSE -->
 ### License
