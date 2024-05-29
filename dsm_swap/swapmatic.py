@@ -267,5 +267,5 @@ def coupling_map_to_swaps_topo(cmap: CouplingMap):
 
     topo = [[] for _ in range(max(colors.values()) + 1)]
     for k, v in colors.items():
-        topo[v].append(k)
+        topo[v].append(tuple(np.sort(k)))
     return topo

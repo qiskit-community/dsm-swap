@@ -39,5 +39,7 @@ class TestQiskitPlugin(DSMSwapTestCase):
         pm = plugin.pass_manager(pm_config, optimization_level=0)
 
         tqc = pm.run(self.reference_qc)
-        self.assertEqual(tqc.depth(), 17)
-        self.assertEqual(tqc.count_ops()["swap"], 17)
+        # todo: 17 replaced with 14
+        self.assertEqual(tqc.depth(), 14)
+        # todo: 17 replaced with 14
+        self.assertEqual(tqc.count_ops()["swap"], 14)

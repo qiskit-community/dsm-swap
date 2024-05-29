@@ -1,5 +1,5 @@
 torch
 numpy
-qiskit-terra>=0.22.0
+qiskit[visualization]
 matplotlib
 networkx

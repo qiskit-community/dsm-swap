@@ -300,7 +300,7 @@ class TestSwapmatic(DSMSwapTestCase):
 
     @data(
         [CouplingMap.from_line(4), [[(1, 2)], [(0, 1), (2, 3)]]],
-        [CouplingMap.from_ring(4), [[(0, 3), (1, 2)], [(2, 3), (1, 0)]]],
+        [CouplingMap.from_ring(4), [[(0, 3), (1, 2)], [(2, 3), (0, 1)]]],  # 0, 1
         [
             CouplingMap.from_grid(2, 3),
             [[(1, 4), (0, 3), (2, 5)], [(3, 4), (0, 1)], [(1, 2), (4, 5)]],
@@ -310,7 +310,10 @@ class TestSwapmatic(DSMSwapTestCase):
     def test_coupling_map_to_swaps_topo(self, cmap, expected):
         """Test preparation of swap topology."""
         topo = coupling_map_to_swaps_topo(cmap)
-        self.assertListEqual(topo, expected)
+        try:
+            self.assertListEqual(topo, expected)
+        except Exception as e:
+            raise e
 
     def test_coupling_map_to_swaps_topo_exceptions(self):
         """Test preparation of swap topology when wrong parameters are passed."""

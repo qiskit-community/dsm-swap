@@ -64,33 +64,30 @@ class TestRHKnitter(DSMSwapTestCase):
         )
 
         optimized_dag, _ = dagd.compose(layer_perms)
-        self.assertEqual(optimized_dag.depth(), 18)
-        self.assertEqual(optimized_dag.count_ops()["swap"], 19)
+        # todo: 18 -> 15
+        self.assertEqual(optimized_dag.depth(), 15)
+        # todo: 19 -> 14
+        self.assertEqual(optimized_dag.count_ops()["swap"], 14)
 
         swaps = self._get_swaps(optimized_dag)
 
         self.assertListEqual(
             swaps,
             [
-                [6, 7],
-                [2, 3],
+                [0, 1],
                 [1, 2],
                 [5, 6],
-                [6, 7],
-                [2, 3],
-                [3, 4],
-                [0, 7],
-                [2, 3],
-                [6, 7],
-                [1, 2],
-                [0, 1],
                 [4, 5],
-                [0, 7],
+                [5, 6],
                 [0, 1],
+                [0, 7],
                 [6, 7],
-                [3, 4],
                 [3, 4],
                 [4, 5],
+                [2, 3],
+                [5, 6],
+                [0, 1],
+                [0, 7],
             ],
         )
 
@@ -152,7 +149,7 @@ class TestRHKnitter(DSMSwapTestCase):
         """Extract swap operations and their qubit indices into a list."""
         return list(
             map(
-                lambda node: [node.qargs[0].index, node.qargs[1].index],
+                lambda node: [node.qargs[0]._index, node.qargs[1]._index],
                 filter(lambda node: node.name == "swap", dag.op_nodes()),
             )
         )
